@@ -1,0 +1,61 @@
+<p class="form-header">Add a new user!</p>
+<form #userAdd = "ngForm" [formGroup]="formData" (ngSubmit) = "addNewUser(userAdd.value)" >
+  <div class="form-field">
+    <div class="form-field-labels">
+      <label>First Name</label>
+      <span
+        class="form-field-error"
+        *ngIf="this.formData.controls.firstName.hasError('required') && this.formData.controls.firstName.touched">Field can't be empty
+      </span>
+      <span
+        class="form-field-error"
+        *ngIf="this.formData.controls.firstName.hasError('minlength')">Fist Name is too short
+      </span>
+    </div>
+    <input type = "text" name = "firstName" placeholder = "Input first name here..." class="form-field-input" formControlName="firstName">
+  </div>
+  <div class="form-field">
+    <div class="form-field-labels">
+      <label>Last Name</label>
+      <span
+        class="form-field-error"
+        *ngIf="this.formData.controls.lastName.hasError('required') && this.formData.controls.lastName.touched">Field can't be empty
+      </span>
+      <span
+        class="form-field-error"
+        *ngIf="this.formData.controls.lastName.hasError('minlength')">Last Name is too short
+      </span>
+    </div>
+    <input type = "text" name = "lastName" placeholder = "Input last name here..." class="form-field-input" formControlName="lastName">
+  </div>
+  <div class="form-field">
+    <div class="form-field-labels">
+      <label>Email</label>
+      <span
+        class="form-field-error"
+        *ngIf="this.formData.controls.email.hasError('required') && this.formData.controls.email.touched">Field can't be empty
+      </span>
+      <span
+        class="form-field-error"
+        *ngIf="this.formData.controls.email.hasError('email') || this.formData.controls.email.hasError('pattern')">Invalid email
+      </span>
+    </div>
+    <input type = "email" name = "email" placeholder = "Input email here..." class="form-field-input" formControlName="email">
+  </div>
+  <div class="form-field">
+    <div class="form-field-labels">
+      <label>Phone</label>
+      <span
+        class="form-field-error"
+        *ngIf="this.formData.controls.phone.hasError('required') && this.formData.controls.phone.touched">Field can't be empty
+      </span>
+      <span
+        class="form-field-error"
+        *ngIf="this.formData.controls.phone.hasError('minlength') || this.formData.controls.phone.hasError('pattern')">Phone must have view like - 380 xx xxx xx xx and length of 12 numbers
+      </span>
+    </div>
+    <input type = "text" name = "phone" placeholder = "38(XXX) XXX XX XX" class="form-field-input" formControlName="phone">
+  </div>
+  <button class="add-button" type="submit">Add</button>
+</form>
+

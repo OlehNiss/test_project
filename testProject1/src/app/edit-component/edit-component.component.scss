@@ -1,0 +1,44 @@
+*{
+  box-sizing: border-box;
+}
+.form{
+  &-header{
+    font-size: 20px;
+  }
+  &-field{
+    margin: 30px 0;
+  }
+  &-field-labels{
+    font-size: 16px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+  &-field-error{
+    font-size: 13px;
+    color: red;
+  }
+  &-field-input {
+    font-size: 14px;
+    padding: 0 15px;
+    width: 1200px;
+    min-height: 44px;
+    border: 1px solid rgba(60, 66, 87, 0.16);
+    border-radius: 5px;
+    outline-color: #007BFF;
+    background-color: rgb(255, 255, 255);
+  }
+}
+.save-button{
+  margin: 20px 30px 20px 5px;
+  padding: 10px 25px;
+  font-size: 16px;
+  background-color: #28A745;
+  border: 1px solid #28A745;
+  border-radius: 5px;
+  color: #FFFFFF;
+  &:hover{
+    cursor: pointer;
+  }
+}
+

@@ -1,0 +1,19 @@
+*{
+  box-sizing: border-box;
+}
+.wrapper{
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.btn{
+  margin: 20px 30px 20px 5px;
+  padding: 10px 25px;
+  font-size: 18px;
+  background-color: #007BFF;
+  border: 1px solid #007BFF;
+  border-radius: 5px;
+  color: #FFFFFF;
+  &:hover{
+    cursor: pointer;
+  }
+}

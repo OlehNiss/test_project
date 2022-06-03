@@ -1,0 +1,19 @@
+*{
+  box-sizing: border-box;
+}
+table {
+  width: 100%;
+}
+.btn{
+  border: none;
+  background-color: white;
+  &:hover{
+    cursor: pointer;
+  }
+}
+.edit-button{
+  color: #EFA863;
+}
+.delete-button{
+  color: red;
+}
